@@ -1,23 +1,22 @@
 {
-    "name": "comaseinformatique\/highchart\u002Dparser",
+    "name": "comaseinformatique\highchart-parser",
     "description": "",
     "type": "library",
-    "keywords": [""],
-    "homepage": "https://github.com/JulienBohy/highchart\u002Dparser",
+    "homepage": "https://github.com/JulienBohy/highchart-parser",
     "license": "MIT",
     "authors": [
         {
             "name": "julienbohy",
-            "email": "boju\u0040sbim.be",
-            "homepage": "http\u003A\/\/www.comaseinfo.be\/"
+            "email": "boju@sbim.be",
+            "homepage": "http://www.comaseinfo.be/"
         }
     ],
     "support": {
-        "docs": "https://JulienBohy.github.io/highchart\u002Dparser/",
-        "issues": "https://github.com/JulienBohy/highchart\u002Dparser/issues",
-        "rss": "https://github.com/JulienBohy/highchart\u002Dparser/releases.atom",
-        "source": "https://github.com/JulienBohy/highchart\u002Dparser.git",
-        "wiki": "https://github.com/JulienBohy/highchart\u002Dparser/wiki"
+        "docs": "https://JulienBohy.github.io/highchart-parser/",
+        "issues": "https://github.com/JulienBohy/highchart-parser/issues",
+        "rss": "https://github.com/JulienBohy/highchart-parser/releases.atom",
+        "source": "https://github.com/JulienBohy/highchart-parser.git",
+        "wiki": "https://github.com/JulienBohy/highchart-parser/wiki"
     },
     "require": {
         "php": "^7.2"
