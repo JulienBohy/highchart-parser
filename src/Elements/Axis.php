@@ -23,6 +23,7 @@ namespace Highcharts;
         private $max;
         private $tickInterval;
         private $minorTickInterval;
+        private $minTickInterval;
         private $gridLineDashStyle;
         private $gridLineColor;
         private $crosshair;
@@ -117,10 +118,19 @@ namespace Highcharts;
             $this->plotLines[] = $plotLine;
         }
 
+        public function setMinTickInterval($minTickInterval)
+        {
+            $this->minTickInterval = $minTickInterval;
+        }
+
+        
         public function jsonSerialize()
         {
             return array_filter(get_object_vars($this));
         }
+
+
+
     }
 
     class xAxis extends \Highcharts\Axis
