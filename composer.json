@@ -1,5 +1,5 @@
 {
-    "name": "comaseinformatique\highchart-parser",
+     "name": "comaseinformatique/highchart-parser",
     "description": "",
     "type": "library",
     "homepage": "https://github.com/JulienBohy/highchart-parser",
@@ -65,4 +65,7 @@
     "config": {
         "sort-packages": true
     }
+}
+{
+	"$schema": "http://json-schema.org/draft-07/schema#"
 }
