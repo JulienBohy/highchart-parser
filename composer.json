@@ -1,71 +1,77 @@
 {
-     "name": "comaseinformatique/highchart-parser",
-    "description": "",
-    "type": "library",
-    "homepage": "https://github.com/JulienBohy/highchart-parser",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "julienbohy",
-            "email": "boju@sbim.be",
-            "homepage": "http://www.comaseinfo.be/"
-        }
-    ],
-    "support": {
-        "docs": "https://JulienBohy.github.io/highchart-parser/",
-        "issues": "https://github.com/JulienBohy/highchart-parser/issues",
-        "rss": "https://github.com/JulienBohy/highchart-parser/releases.atom",
-        "source": "https://github.com/JulienBohy/highchart-parser.git",
-        "wiki": "https://github.com/JulienBohy/highchart-parser/wiki"
-    },
-    "require": {
-        "php": "^7.2"
-    },
-    "require-dev": {
-        "jakub-onderka/php-parallel-lint": "^1",
-        "mockery/mockery": "^1",
-        "phpstan/phpstan": "^0.11",
-        "phpstan/phpstan-mockery": "^0.11",
-        "phpunit/phpunit": "^8",
-        "squizlabs/php_codesniffer": "^3"
-    },
-    "autoload": {
-        "psr-4": {
-            "Highcharts\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Highcharts\\Test\\": "tests/"
-        }
-    },
-    "scripts": {
-        "lint": "parallel-lint src tests",
-        "phpcs": "phpcs src tests --standard=psr12 -sp --colors",
-        "phpstan": [
-            "phpstan analyse src -c phpstan.neon --level max --no-progress",
-            "phpstan analyse tests -c phpstan.neon --level 4 --no-progress"
-        ],
-        "phpunit": "phpunit --verbose --colors=always",
-        "phpunit-ci": "phpunit --verbose --coverage-clover build/logs/clover.xml",
-        "phpunit-coverage": "phpunit --verbose --colors=always --coverage-html build/coverage",
-        "test": [
-            "@lint",
-            "@phpcs",
-            "@phpstan",
-            "@phpunit"
-        ],
-        "test-ci": [
-            "@lint",
-            "@phpcs",
-            "@phpstan",
-            "@phpunit-ci"
-        ]
-    },
-    "config": {
-        "sort-packages": true
+  "name": "comaseinformatique/highchart-parser",
+  "description": "",
+  "keywords": [
+    "relevant",
+    "tags",
+    "go",
+    "here"
+  ],
+  "type": "library",
+  "homepage": "https://github.com/JulienBohy/highchart-parser",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "julienbohy",
+      "email": "boju@sbim.be",
+      "homepage": "http://www.comaseinfo.be/"
     }
+  ],
+  "support": {
+    "docs": "https://JulienBohy.github.io/highchart-parser/",
+    "issues": "https://github.com/JulienBohy/highchart-parser/issues",
+    "rss": "https://github.com/JulienBohy/highchart-parser/releases.atom",
+    "source": "https://github.com/JulienBohy/highchart-parser.git",
+    "wiki": "https://github.com/JulienBohy/highchart-parser/wiki"
+  },
+  "require": {
+    "php": "^7.2"
+  },
+  "require-dev": {
+    "jakub-onderka/php-parallel-lint": "^1",
+    "mockery/mockery": "^1",
+    "phpstan/phpstan": "^0.11",
+    "phpstan/phpstan-mockery": "^0.11",
+    "phpunit/phpunit": "^8",
+    "squizlabs/php_codesniffer": "^3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Highcharts\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Highcharts\\Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "parallel-lint src tests",
+    "phpcs": "phpcs src tests --standard=psr12 -sp --colors",
+    "phpstan": [
+      "phpstan analyse src -c phpstan.neon --level max --no-progress",
+      "phpstan analyse tests -c phpstan.neon --level 4 --no-progress"
+    ],
+    "phpunit": "phpunit --verbose --colors=always",
+    "phpunit-ci": "phpunit --verbose --coverage-clover build/logs/clover.xml",
+    "phpunit-coverage": "phpunit --verbose --colors=always --coverage-html build/coverage",
+    "test": [
+      "@lint",
+      "@phpcs",
+      "@phpstan",
+      "@phpunit"
+    ],
+    "test-ci": [
+      "@lint",
+      "@phpcs",
+      "@phpstan",
+      "@phpunit-ci"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  }
 }
 {
-	"$schema": "http://json-schema.org/draft-07/schema#"
+  "$schema": "http://json-schema.org/draft-07/schema#"
 }
