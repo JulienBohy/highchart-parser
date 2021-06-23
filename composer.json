@@ -25,13 +25,11 @@
     "wiki": "https://github.com/JulienBohy/highchart-parser/wiki"
   },
   "require": {
-    "php": "^7.2"
+    "php": "^8.0"
   },
   "require-dev": {
     "jakub-onderka/php-parallel-lint": "^1",
     "mockery/mockery": "^1",
-    "phpstan/phpstan": "^0.11",
-    "phpstan/phpstan-mockery": "^0.11",
     "phpunit/phpunit": "^8",
     "squizlabs/php_codesniffer": "^3"
   },
@@ -72,4 +70,3 @@
     "sort-packages": true
   }
 }
-
