@@ -15,7 +15,7 @@ namespace Highcharts;
 
 use RuntimeException;
 
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 /**
  * A general exception for comaseinformatique/highchart-parser.
