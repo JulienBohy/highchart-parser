@@ -10,10 +10,10 @@
  * @license http://opensource.org/licenses/MIT MIT
  */
 
-declare(strict_types=1);
+
 
 namespace Highcharts;
-
+require '../vendor/autoload.php';
 /**
  * A general exception for comaseinformatique/highchart-parser.
  */
