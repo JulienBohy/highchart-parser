@@ -5,7 +5,7 @@
 namespace Highcharts\Elements;
 
 use Highcharts\Constants\Enabled;
-use Highcharts\Constants\serieType;
+use Highcharts\Constants\SerieType;
 use Highcharts\Constants\Symbol;
 use JsonSerializable;
 
