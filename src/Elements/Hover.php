@@ -3,6 +3,7 @@
 namespace Highcharts\Elements;
 
 use Highcharts\Constants\Enabled;
+use JsonSerializable;
 
 class Hover implements JsonSerializable
 {
