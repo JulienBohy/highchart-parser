@@ -3,7 +3,9 @@
 namespace Highcharts;
 
 use JsonSerializable;
+
 require '../vendor/autoload.php';
+
 class ChartOptions implements JsonSerializable
 {
     private $type;

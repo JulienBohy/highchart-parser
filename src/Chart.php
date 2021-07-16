@@ -1,154 +1,143 @@
 <?php
 
-/**
- * This file is part of the comaseinformatique/highchart-parser library
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- *
- * @copyright Copyright (c) julienbohy <boju@sbim.be>
- * @license http://opensource.org/licenses/MIT MIT
- */
-
-declare(strict_types=1);
 
 namespace Highcharts;
 
-    use Highcharts\Elements\Credits;
-    use Highcharts\Elements\Exporting;
-    use Highcharts\Elements\Legend;
-    use Highcharts\Elements\plotOptions;
-    use Highcharts\Elements\Series;
-    use Highcharts\Elements\Title;
-    use Highcharts\Elements\Tooltip;
-    use Highcharts\Elements\xAxis;
-    use Highcharts\Elements\yAxis;
-    use JsonSerializable;
+use Highcharts\Constants\ChartType;
+use Highcharts\Elements\Credits;
+use Highcharts\Elements\Exporting;
+use Highcharts\Elements\Legend;
+use Highcharts\Elements\plotOptions;
+use Highcharts\Elements\Series;
+use Highcharts\Elements\Title;
+use Highcharts\Elements\Tooltip;
+use Highcharts\Elements\xAxis;
+use Highcharts\Elements\yAxis;
+use JsonSerializable;
 
-    require '../vendor/autoload.php';
-    /**
-     * Description of Chart.
-     *
-     */
+require '../vendor/autoload.php';
 
+/**
+ * Description of Chart.
+ *
+ */
+class Chart implements JsonSerializable
+{
+    private $chart;
+    private $title;
+    private $exporting;
+    private $chartSubtitle;
+    private $chartType;
+    private $tooltip;
+    private $credits;
+    private $xAxis;
+    private $yAxis;
+    private $legend;
+    private $plotOptions;
+    private $series = [];
 
-    class Chart implements JsonSerializable
+    public function __construct()
     {
-        private $chart;
-        private $title;
-        private $exporting;
-        private $chartSubtitle;
-        private $chartType;
-        private $tooltip;
-        private $credits;
-        private $xAxis;
-        private $yAxis;
-        private $legend;
-        private $plotOptions;
-        private $series = [];
-
-        public function __construct()
-        {
-        }
-
-        /**
-         * @param Exporting $exporting
-         */
-        public function setExporting($exporting)
-        {
-            $this->exporting = $exporting;
-        }
-
-        /**
-         * @param ChartOptions $chart
-         */
-        public function setChart($chart)
-        {
-            $this->chart = $chart;
-        }
-
-        /**
-         * @param xAxis $xAxis
-         */
-        public function setXAxis($xAxis)
-        {
-            $this->xAxis = $xAxis;
-        }
-
-        /**
-         * @param yAxis $yAxis
-         */
-        public function setYAxis($yAxis)
-        {
-            $this->yAxis = $yAxis;
-        }
-
-        /**
-         * @param Title $title
-         */
-        public function setTitle($title)
-        {
-            $this->title = $title;
-        }
-
-        /**
-         * @param Title $title
-         */
-        public function setChartSubTitle($title)
-        {
-            $this->chartSubtitle = $title;
-        }
-
-        /**
-         * @param ChartType $type
-         */
-        public function setChartType($type)
-        {
-            $this->chartType = $type;
-        }
-
-        /**
-         * @param Tooltip $tooltip
-         */
-        public function setTooltip(Tooltip $tooltip)
-        {
-            $this->tooltip = $tooltip;
-        }
-
-        /**
-         * @param Credits $credit
-         */
-        public function setCredits(Credits $credit)
-        {
-            $this->credits = $credit;
-        }
-
-        /**
-         * @param Legend $legend
-         */
-        public function setLegend($legend)
-        {
-            $this->legend = $legend;
-        }
-
-        /**
-         * @param Series $series
-         */
-        public function addSeries($series)
-        {
-            $this->series[] = $series;
-        }
-
-        /**
-         * @param plotOptions $plotOptions
-         */
-        public function setPlotOptions($plotOptions)
-        {
-            $this->plotOptions = $plotOptions;
-        }
-
-        public function jsonSerialize()
-        {
-            return array_filter(get_object_vars($this));
-        }
     }
+
+    /**
+     * @param Exporting $exporting
+     */
+    public function setExporting($exporting)
+    {
+        $this->exporting = $exporting;
+    }
+
+    /**
+     * @param ChartOptions $chart
+     */
+    public function setChart($chart)
+    {
+        $this->chart = $chart;
+    }
+
+    /**
+     * @param xAxis $xAxis
+     */
+    public function setXAxis($xAxis)
+    {
+        $this->xAxis = $xAxis;
+    }
+
+    /**
+     * @param yAxis $yAxis
+     */
+    public function setYAxis($yAxis)
+    {
+        $this->yAxis = $yAxis;
+    }
+
+    /**
+     * @param Title $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @param Title $title
+     */
+    public function setChartSubTitle($title)
+    {
+        $this->chartSubtitle = $title;
+    }
+
+    /**
+     * @param ChartType $type
+     */
+    public function setChartType($type)
+    {
+        $this->chartType = $type;
+    }
+
+    /**
+     * @param Tooltip $tooltip
+     */
+    public function setTooltip(Tooltip $tooltip)
+    {
+        $this->tooltip = $tooltip;
+    }
+
+    /**
+     * @param Credits $credit
+     */
+    public function setCredits(Credits $credit)
+    {
+        $this->credits = $credit;
+    }
+
+    /**
+     * @param Legend $legend
+     */
+    public function setLegend($legend)
+    {
+        $this->legend = $legend;
+    }
+
+    /**
+     * @param Series $series
+     */
+    public function addSeries($series)
+    {
+        $this->series[] = $series;
+    }
+
+    /**
+     * @param plotOptions $plotOptions
+     */
+    public function setPlotOptions($plotOptions)
+    {
+        $this->plotOptions = $plotOptions;
+    }
+
+    public function jsonSerialize()
+    {
+        return array_filter(get_object_vars($this));
+    }
+}
