@@ -7,7 +7,7 @@
      */
 
 namespace Highcharts;
-
+require '../vendor/autoload.php';
     /**
      * Description of ChartType.
      *
