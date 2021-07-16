@@ -17,10 +17,6 @@ use JsonSerializable;
 
 require '../vendor/autoload.php';
 
-/**
- * Description of Chart.
- *
- */
 class Chart implements JsonSerializable
 {
     private $chart;
