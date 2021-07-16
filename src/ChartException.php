@@ -16,7 +16,6 @@ namespace Highcharts;
 use RuntimeException;
 
 
-
 /**
  * A general exception for comaseinformatique/highchart-parser.
  */

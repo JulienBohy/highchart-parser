@@ -11,7 +11,6 @@ namespace Highcharts\Elements;
 use JsonSerializable;
 
 
-
 /**
  * Description of plot.
  *

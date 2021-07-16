@@ -16,7 +16,6 @@ use Highcharts\Elements\yAxis;
 use JsonSerializable;
 
 
-
 class Chart implements JsonSerializable
 {
     private $chart;

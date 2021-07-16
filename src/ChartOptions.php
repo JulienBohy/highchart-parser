@@ -5,7 +5,6 @@ namespace Highcharts;
 use JsonSerializable;
 
 
-
 class ChartOptions implements JsonSerializable
 {
     private $type;
