@@ -6,7 +6,7 @@
      * and open the template in the editor.
      */
 
-namespace Highcharts;
+namespace Highcharts\Elements;
 
     use function array_filter;
     use function is_null;
