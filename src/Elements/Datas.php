@@ -7,7 +7,7 @@
  */
 
 namespace Highcharts\Elements;
-require '../../vendor/autoload.php';
+
 
 use JsonSerializable;
 use function array_filter;

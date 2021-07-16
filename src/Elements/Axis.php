@@ -10,7 +10,7 @@ namespace Highcharts\Elements;
 
 use JsonSerializable;
 
-require '../../vendor/autoload.php';
+
 
 /**
  * Description of XAxis.

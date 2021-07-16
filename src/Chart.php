@@ -15,7 +15,7 @@ use Highcharts\Elements\xAxis;
 use Highcharts\Elements\yAxis;
 use JsonSerializable;
 
-require 'vendor/autoload.php';
+
 
 class Chart implements JsonSerializable
 {

@@ -13,7 +13,7 @@ use Highcharts\Constants\serieType;
 use Highcharts\Constants\Symbol;
 use JsonSerializable;
 
-require '../../vendor/autoload.php';
+
 
 /**
  * Description of Series.
