@@ -14,6 +14,7 @@ declare(strict_types=1);
 
 namespace Highcharts;
 
+    require '../vendor/autoload.php';
     /**
      * Description of Chart.
      *
