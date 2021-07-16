@@ -7,13 +7,15 @@
      */
 
 namespace Highcharts\Elements;
+use JsonSerializable;
 
+require '../../vendor/autoload.php';
     /**
      * Description of Legend.
      *
      * @author BOJU
      */
-    class Legend implements \JsonSerializable
+    class Legend implements JsonSerializable
     {
         private $enabled;
         private $layout;

@@ -7,13 +7,15 @@
      */
 
 namespace Highcharts\Elements;
+use JsonSerializable;
 
+require '../../vendor/autoload.php';
     /**
      * Description of Marker.
      *
      * @author BOJU
      */
-    class Exporting implements \JsonSerializable
+    class Exporting implements JsonSerializable
     {
         private $enabled;
         private $url;

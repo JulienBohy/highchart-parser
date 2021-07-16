@@ -7,13 +7,15 @@
      */
 
 namespace Highcharts\Elements;
+use JsonSerializable;
 
+require '../../vendor/autoload.php';
     /**
      * Description of Credits.
      *
      * @author BOJU
      */
-    class Credits implements \JsonSerializable
+    class Credits implements JsonSerializable
     {
         private $text;
         private $href;

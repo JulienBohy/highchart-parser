@@ -7,13 +7,15 @@
      */
 
 namespace Highcharts\Elements;
+use JsonSerializable;
 
+require '../../vendor/autoload.php';
     /**
      * Description of plot.
      *
      * @author BOJU
      */
-    class plotLine implements \JsonSerializable
+    class plotLine implements JsonSerializable
     {
         private $color;
         private $width;

@@ -7,13 +7,15 @@
      */
 
 namespace Highcharts\Elements;
+use JsonSerializable;
 
+require '../../vendor/autoload.php';
     /**
      * Description of plotOptions.
      *
      * @author BOJU
      */
-    class plotOptions implements \JsonSerializable
+    class plotOptions implements JsonSerializable
     {
         private $spline;
         private $scatter;

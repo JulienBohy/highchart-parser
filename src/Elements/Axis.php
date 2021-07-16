@@ -7,7 +7,7 @@
      */
 
 namespace Highcharts\Elements;
-
+require '../../vendor/autoload.php';
     /**
      * Description of XAxis.
      *

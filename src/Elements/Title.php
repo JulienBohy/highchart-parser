@@ -7,13 +7,15 @@
      */
 
 namespace Highcharts\Elements;
+use JsonSerializable;
 
+require '../../vendor/autoload.php';
     /**
      * Description of Title.
      *
      * @author BOJU
      */
-    class Title implements \JsonSerializable
+    class Title implements JsonSerializable
     {
         private $text;
         private $x;

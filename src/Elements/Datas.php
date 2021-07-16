@@ -7,8 +7,10 @@
      */
 
 namespace Highcharts\Elements;
+require '../../vendor/autoload.php';
 
-    use function array_filter;
+use JsonSerializable;
+use function array_filter;
     use function is_null;
 
     /**
@@ -16,7 +18,7 @@ namespace Highcharts\Elements;
      *
      * @author BOJU
      */
-    class Datas implements \JsonSerializable
+    class Datas implements JsonSerializable
     {
         private $datas = [];
 

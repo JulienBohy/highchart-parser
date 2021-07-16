@@ -7,13 +7,15 @@
      */
 
 namespace Highcharts\Elements;
+use JsonSerializable;
 
+require '../../vendor/autoload.php';
     /**
      * Description of Title.
      *
      * @author BOJU
      */
-    class Tooltip implements \JsonSerializable
+    class Tooltip implements JsonSerializable
     {
         private $shared;
         private $valueDecimals;
