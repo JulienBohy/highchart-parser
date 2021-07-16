@@ -14,11 +14,6 @@ use Highcharts\Constants\Symbol;
 use JsonSerializable;
 
 
-/**
- * Description of Series.
- *
- * @author BOJU
- */
 class Series implements JsonSerializable
 {
     private $name;
