@@ -14,25 +14,25 @@ declare(strict_types=1);
 
 namespace Highcharts;
 
+    use Highcharts\Elements\Credits;
+    use Highcharts\Elements\Exporting;
+    use Highcharts\Elements\Legend;
+    use Highcharts\Elements\plotOptions;
+    use Highcharts\Elements\Series;
+    use Highcharts\Elements\Title;
+    use Highcharts\Elements\Tooltip;
+    use Highcharts\Elements\xAxis;
+    use Highcharts\Elements\yAxis;
+    use JsonSerializable;
+
     require '../vendor/autoload.php';
     /**
      * Description of Chart.
      *
      */
-    require_once __DIR__.'/Const.php';
-    require_once __DIR__.'/Elements/Credits.php';
-    require_once __DIR__.'/Elements/Exporting.php';
-    require_once __DIR__.'/Elements/Title.php';
-    require_once __DIR__.'/Elements/Tooltip.php';
-    require_once __DIR__.'/Elements/Axis.php';
-    require_once __DIR__.'/Elements/Legend.php';
-    require_once __DIR__.'/Elements/Marker.php';
-    require_once __DIR__.'/Elements/plotOptions.php';
-    require_once __DIR__.'/Elements/Series.php';
-    require_once __DIR__.'/Elements/Datas.php';
-    require_once __DIR__.'/Elements/plot.php';
 
-    class Chart implements \JsonSerializable
+
+    class Chart implements JsonSerializable
     {
         private $chart;
         private $title;
@@ -52,7 +52,7 @@ namespace Highcharts;
         }
 
         /**
-         * @param \Highcharts\Exporting $exporting
+         * @param Exporting $exporting
          */
         public function setExporting($exporting)
         {
@@ -60,7 +60,7 @@ namespace Highcharts;
         }
 
         /**
-         * @param \Highcharts\ChartOptions $chart
+         * @param ChartOptions $chart
          */
         public function setChart($chart)
         {
@@ -68,7 +68,7 @@ namespace Highcharts;
         }
 
         /**
-         * @param \Highcharts\xAxis $xAxis
+         * @param xAxis $xAxis
          */
         public function setXAxis($xAxis)
         {
@@ -76,7 +76,7 @@ namespace Highcharts;
         }
 
         /**
-         * @param \Highcharts\yAxis $yAxis
+         * @param yAxis $yAxis
          */
         public function setYAxis($yAxis)
         {
@@ -84,7 +84,7 @@ namespace Highcharts;
         }
 
         /**
-         * @param \Highcharts\Title $title
+         * @param Title $title
          */
         public function setTitle($title)
         {
@@ -92,7 +92,7 @@ namespace Highcharts;
         }
 
         /**
-         * @param \Highcharts\Title $title
+         * @param Title $title
          */
         public function setChartSubTitle($title)
         {
@@ -100,7 +100,7 @@ namespace Highcharts;
         }
 
         /**
-         * @param \Highcharts\Constants\ChartType $type
+         * @param ChartType $type
          */
         public function setChartType($type)
         {
@@ -108,23 +108,23 @@ namespace Highcharts;
         }
 
         /**
-         * @param \Highcharts\Tooltip $tooltip
+         * @param Tooltip $tooltip
          */
-        public function setTooltip(\Highcharts\Tooltip $tooltip)
+        public function setTooltip(Tooltip $tooltip)
         {
             $this->tooltip = $tooltip;
         }
 
         /**
-         * @param \Highcharts\Credits $credit
+         * @param Credits $credit
          */
-        public function setCredits(\Highcharts\Credits $credit)
+        public function setCredits(Credits $credit)
         {
             $this->credits = $credit;
         }
 
         /**
-         * @param \Highcharts\Legend $legend
+         * @param Legend $legend
          */
         public function setLegend($legend)
         {
@@ -132,7 +132,7 @@ namespace Highcharts;
         }
 
         /**
-         * @param \Highcharts\Series $series
+         * @param Series $series
          */
         public function addSeries($series)
         {
@@ -140,56 +140,11 @@ namespace Highcharts;
         }
 
         /**
-         * @param \Highcharts\plotOptions $plotOptions
+         * @param plotOptions $plotOptions
          */
         public function setPlotOptions($plotOptions)
         {
             $this->plotOptions = $plotOptions;
-        }
-
-        public function jsonSerialize()
-        {
-            return array_filter(get_object_vars($this));
-        }
-    }
-
-    class ChartOptions implements \JsonSerializable
-    {
-        private $type;
-        private $width;
-        private $height;
-        private $renderTo;
-        private $margin;
-        private $spacingLeft;
-
-        public function setMargin($margin)
-        {
-            $this->margin = $margin;
-        }
-
-        public function setSpacingLeft($spacingLeft)
-        {
-            $this->spacingLeft = $spacingLeft;
-        }
-
-        public function setRenderTo($renderTo)
-        {
-            $this->renderTo = $renderTo;
-        }
-
-        public function setType($type)
-        {
-            $this->type = $type;
-        }
-
-        public function setWidth($width)
-        {
-            $this->width = $width;
-        }
-
-        public function setHeight($height)
-        {
-            $this->height = $height;
         }
 
         public function jsonSerialize()

@@ -6,7 +6,7 @@
      * and open the template in the editor.
      */
 
-namespace Highcharts\Constants;
+namespace Highcharts;
 
     /**
      * Description of ChartType.
